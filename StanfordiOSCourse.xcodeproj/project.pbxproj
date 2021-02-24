@@ -56,15 +56,23 @@
 		EC41B4D025E554AA006014E2 /* StanfordiOSCourse */ = {
 			isa = PBXGroup;
 			children = (
-				EC41B4D125E554AA006014E2 /* AppDelegate.swift */,
-				EC41B4D325E554AA006014E2 /* SceneDelegate.swift */,
 				EC41B4D525E554AA006014E2 /* ViewController.swift */,
 				EC41B4D725E554AA006014E2 /* Main.storyboard */,
-				EC41B4DA25E554AC006014E2 /* Assets.xcassets */,
-				EC41B4DC25E554AC006014E2 /* LaunchScreen.storyboard */,
 				EC41B4DF25E554AC006014E2 /* Info.plist */,
+				EC41B4E625E56392006014E2 /* Supporting Files */,
 			);
 			path = StanfordiOSCourse;
+			sourceTree = "<group>";
+		};
+		EC41B4E625E56392006014E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC41B4D125E554AA006014E2 /* AppDelegate.swift */,
+				EC41B4D325E554AA006014E2 /* SceneDelegate.swift */,
+				EC41B4DA25E554AC006014E2 /* Assets.xcassets */,
+				EC41B4DC25E554AC006014E2 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
