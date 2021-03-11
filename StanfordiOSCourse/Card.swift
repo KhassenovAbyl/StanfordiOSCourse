@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card
+struct Card 
 {
     var isMatched = false
     var isFaceUp = false

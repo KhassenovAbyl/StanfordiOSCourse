@@ -11,7 +11,11 @@ class ViewController: UIViewController {
 
     private lazy var game = Concentration(numberOfPairsOfCards: (cardButttons.count + 1) / 2)
     
-    private(set) var flipCount = 0 { didSet{ flipCountLabel.text = "Flip: \(flipCount)" }}
+    private(set) var flipCount = 0 {
+        didSet{
+            flipCountLabel.text = "Flip: \(flipCount)"
+        }
+    }
     
     @IBOutlet private weak var flipCountLabel: UILabel!
     
@@ -49,14 +53,15 @@ class ViewController: UIViewController {
         }
     }
     
-    private var emojiChoises = ["🚗","🎮","🎈","🖤","🔋","❣️","🏄🏾‍♂️","☃️" ,"🍌"]
+    //private var emojiChoises = ["🚗","🎮","🎈","🖤","🔋","❣️","🏄🏾‍♂️","☃️" ,"🍌"]
+    private var emojiChoises = "🚗🎮🎈🖤🔋❣️🏄🏾‍♂️☃️🍌"
     
     private var emoji = [Int:String]()
     
     private func emoji(for card: Card) -> String {
         if emoji[card.identifier] == nil , emojiChoises.count > 0{
-            
-            emoji[card.identifier] = emojiChoises.remove(at: emojiChoises.count.arc4random)
+            let randomStringIndex = emojiChoises.index(emojiChoises.startIndex, offsetBy: emojiChoises.count.arc4random)
+            emoji[card.identifier] = String(emojiChoises.remove(at: randomStringIndex))
         }
         return emoji[card.identifier] ?? "?"
     }

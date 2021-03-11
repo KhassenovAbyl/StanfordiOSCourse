@@ -7,21 +7,22 @@
 
 import Foundation
 
-class Concentration
+struct Concentration
 {
     private(set) var cards = [Card]()
     
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            var foundIndex: Int?
-            for index in cards.indices{
-                if cards[index].isFaceUp{
-                    foundIndex = index
-                } else {
-                    return nil
-                }
-            }
-            return foundIndex
+            return cards.indices.filter { cards[$0].isFaceUp }.onlyAndOnly
+//            var foundIndex: Int?
+//            for index in cards.indices{
+//                if cards[index].isFaceUp{
+//                    foundIndex = index
+//                } else {
+//                    return nil
+//                }
+//            }
+//            return foundIndex
         }
         set {
             for index in cards.indices {
@@ -30,7 +31,7 @@ class Concentration
         }
     }
     
-    func chooseCard(at index: Int){
+    mutating func chooseCard(at index: Int){
         assert(cards.indices.contains(index) , "Concentraition.chooseCard(at: \(index): choosen card is not in the cards")
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard , matchIndex != index {
@@ -45,7 +46,7 @@ class Concentration
         }
     }
     
-    func restartGame(){
+    mutating func restartGame(){
         for card in cards.indices{
             cards[card].isFaceUp = false
             cards[card].isMatched = false
@@ -60,5 +61,12 @@ class Concentration
             cards += [card , card]
         }
         cards.shuffle()
+    }
+}
+
+
+extension Collection{
+    var onlyAndOnly : Element?{
+        return count == 1 ? first : nil
     }
 }
