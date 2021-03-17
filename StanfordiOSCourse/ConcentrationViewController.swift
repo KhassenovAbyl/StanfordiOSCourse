@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
 
     private lazy var game = Concentration(numberOfPairsOfCards: (cardButttons.count + 1) / 2)
     
@@ -39,21 +39,32 @@ class ViewController: UIViewController {
     
     
     private func updateViewFromModel(){
-        for index in cardButttons.indices{
-            let button = cardButttons[index]
-            let card = game.cards[index]
-            
-            if card.isFaceUp {
-                button.setTitle(emoji(for : card), for: .normal)
-                button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            } else {
-                button.setTitle("", for: .normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        if cardButttons != nil{
+            for index in cardButttons.indices{
+                let button = cardButttons[index]
+                let card = game.cards[index]
+                
+                if card.isFaceUp {
+                    button.setTitle(emoji(for : card), for: .normal)
+                    button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                } else {
+                    button.setTitle("", for: .normal)
+                    button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+                }
             }
         }
     }
     
     //private var emojiChoises = ["🚗","🎮","🎈","🖤","🔋","❣️","🏄🏾‍♂️","☃️" ,"🍌"]
+    
+    var theme: String?{
+        didSet{
+            emojiChoises = theme ?? ""
+            emoji = [:]
+            updateViewFromModel()
+        }
+    }
+    
     private var emojiChoises = "🚗🎮🎈🖤🔋❣️🏄🏾‍♂️☃️🍌"
     
     private var emoji = [Int:String]()

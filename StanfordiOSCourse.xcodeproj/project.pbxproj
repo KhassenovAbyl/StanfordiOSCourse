@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		EC41B4D225E554AA006014E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4D125E554AA006014E2 /* AppDelegate.swift */; };
 		EC41B4D425E554AA006014E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4D325E554AA006014E2 /* SceneDelegate.swift */; };
-		EC41B4D625E554AA006014E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4D525E554AA006014E2 /* ViewController.swift */; };
+		EC41B4D625E554AA006014E2 /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4D525E554AA006014E2 /* ConcentrationViewController.swift */; };
 		EC41B4D925E554AA006014E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC41B4D725E554AA006014E2 /* Main.storyboard */; };
 		EC41B4DB25E554AC006014E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC41B4DA25E554AC006014E2 /* Assets.xcassets */; };
 		EC41B4DE25E554AC006014E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC41B4DC25E554AC006014E2 /* LaunchScreen.storyboard */; };
 		EC41B4ED25E6C7AF006014E2 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4EC25E6C7AF006014E2 /* Concentration.swift */; };
 		EC41B4F025E6C88E006014E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41B4EF25E6C88E006014E2 /* Card.swift */; };
+		EC464F3625FFBE0000325352 /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC464F3525FFBE0000325352 /* ConcentrationThemeChooserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC41B4CE25E554AA006014E2 /* StanfordiOSCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanfordiOSCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC41B4D125E554AA006014E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC41B4D325E554AA006014E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC41B4D525E554AA006014E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC41B4D525E554AA006014E2 /* ConcentrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationViewController.swift; sourceTree = "<group>"; };
 		EC41B4D825E554AA006014E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC41B4DA25E554AC006014E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC41B4DD25E554AC006014E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC41B4DF25E554AC006014E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC41B4EC25E6C7AF006014E2 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		EC41B4EF25E6C88E006014E2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EC464F3525FFBE0000325352 /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 		EC41B4D025E554AA006014E2 /* StanfordiOSCourse */ = {
 			isa = PBXGroup;
 			children = (
-				EC41B4D525E554AA006014E2 /* ViewController.swift */,
+				EC41B4D525E554AA006014E2 /* ConcentrationViewController.swift */,
+				EC464F3525FFBE0000325352 /* ConcentrationThemeChooserViewController.swift */,
 				EC41B4EC25E6C7AF006014E2 /* Concentration.swift */,
 				EC41B4EF25E6C88E006014E2 /* Card.swift */,
 				EC41B4D725E554AA006014E2 /* Main.storyboard */,
@@ -151,10 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC41B4D625E554AA006014E2 /* ViewController.swift in Sources */,
+				EC41B4D625E554AA006014E2 /* ConcentrationViewController.swift in Sources */,
 				EC41B4ED25E6C7AF006014E2 /* Concentration.swift in Sources */,
 				EC41B4F025E6C88E006014E2 /* Card.swift in Sources */,
 				EC41B4D225E554AA006014E2 /* AppDelegate.swift in Sources */,
+				EC464F3625FFBE0000325352 /* ConcentrationThemeChooserViewController.swift in Sources */,
 				EC41B4D425E554AA006014E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
